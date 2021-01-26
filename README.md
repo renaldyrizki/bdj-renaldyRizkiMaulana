@@ -1,6 +1,6 @@
 # Get Started
 
-create database mySQL "dbj"
+    *create database mySQL "dbj"
 
     composer install
 
