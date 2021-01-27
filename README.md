@@ -1,6 +1,5 @@
 # Get Started
 
-<<<<<<< HEAD
 ## create database mySQL "dbj_rumah_sakit"
 
 ## composer install
@@ -12,20 +11,6 @@
 ## php -S localhost:8000 -t public
 
 ### http://localhost:8000/v1/rumahsakitumum
-=======
-    create database mySQL "bdj"
-
-    composer install
-
-    php artisan migrate
-
-    php artisan init:data
-
-    php -S localhost:8000 -t public
-
-## Try API
-    http://localhost:8000/v1/rumahsakitumum
->>>>>>> ee7efd3ac886e999df31785569d220ef13dd7d4b
 
 # Lumen PHP Framework
 
