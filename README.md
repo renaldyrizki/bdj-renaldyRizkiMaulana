@@ -1,14 +1,22 @@
 # Get Started
 
-## create database mySQL "dbj_rumah_sakit"
+## create database
 
-## composer install
+### mysql db: "dbj_rumah_sakit"
 
-## php artisan migrate
+![alt schemadb](https://github.com/renaldyrizki/bdj-renaldyRizkiMaulana/blob/master/resources/images/schemadb.PNG)
 
-## php artisan init:data
+## Run
 
-## php -S localhost:8000 -t public
+### composer install
+
+### php artisan migrate
+
+### php artisan init:data
+
+### php -S localhost:8000 -t public
+
+## API URL
 
 ### http://localhost:8000/v1/rumahsakitumum
 
