@@ -48,7 +48,7 @@ class RumahSakit extends Model
     {
         $telps = [];
         foreach(Telepon::where('rumah_sakit_id', $this->id)->get() as $telp){
-            $telps[] = $telp->no_telp;
+            $telps[] = $telp->no_telepon;
         }
         return $telps;
     }
@@ -79,7 +79,7 @@ class RumahSakit extends Model
     {
         $faxs = [];
         foreach(Faximile::where('rumah_sakit_id', $this->id)->get() as $fax){
-            $faxs[] = $fax->no_fax;
+            $faxs[] = $fax->no_faximile;
         }
         return $faxs;
     }
