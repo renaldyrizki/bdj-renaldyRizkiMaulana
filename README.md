@@ -2,23 +2,25 @@
 
 ## create database
 
-### mysql db: "dbj_rumah_sakit"
+    mysql db: "dbj_rumah_sakit"
+
+### db schema
 
 ![alt schemadb](https://github.com/renaldyrizki/bdj-renaldyRizkiMaulana/blob/master/resources/images/schemadb.PNG)
 
 ## Run
 
-### composer install
+    composer install
 
-### php artisan migrate
+    php artisan migrate
 
-### php artisan init:data
+    php artisan init:data
 
-### php -S localhost:8000 -t public
+    php -S localhost:8000 -t public
 
 ## API URL
 
-### http://localhost:8000/v1/rumahsakitumum
+    http://localhost:8000/v1/rumahsakitumum
 
 # Lumen PHP Framework
 
