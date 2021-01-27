@@ -24,12 +24,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => 'dev-master',
-    'version' => 'dev-master',
+    'pretty_version' => '1.0.0+no-version-set',
+    'version' => '1.0.0.0',
     'aliases' => 
     array (
     ),
-    'reference' => 'f53844a28352a26bbc42c0def32b7e66121572f2',
+    'reference' => NULL,
     'name' => 'laravel/lumen',
   ),
   'versions' => 
@@ -158,8 +158,8 @@ private static $installed = array (
     ),
     'illuminate/auth' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
@@ -167,8 +167,8 @@ private static $installed = array (
     ),
     'illuminate/broadcasting' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
@@ -176,8 +176,8 @@ private static $installed = array (
     ),
     'illuminate/bus' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
@@ -185,17 +185,17 @@ private static $installed = array (
     ),
     'illuminate/cache' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '62933606323b1c6197b7e012ef3d1a3c179f97bb',
+      'reference' => '251f524b01a422e3da51ebead2e75ef90b1ee448',
     ),
     'illuminate/collections' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
@@ -203,8 +203,8 @@ private static $installed = array (
     ),
     'illuminate/config' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
@@ -212,8 +212,8 @@ private static $installed = array (
     ),
     'illuminate/console' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
@@ -221,8 +221,8 @@ private static $installed = array (
     ),
     'illuminate/container' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
@@ -230,8 +230,8 @@ private static $installed = array (
     ),
     'illuminate/contracts' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
@@ -239,17 +239,17 @@ private static $installed = array (
     ),
     'illuminate/database' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '49d9fb12529d9dfee26d98f9331c59791b3f55e9',
+      'reference' => '5b0ce5b876f73cfa9bf8066f29e1738547018095',
     ),
     'illuminate/encryption' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
@@ -257,17 +257,17 @@ private static $installed = array (
     ),
     'illuminate/events' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '16ba68c0b3964da8b25ff202201276d860fb587a',
+      'reference' => 'eda1c857153949da15abc9df7608df2cb5d9bcdb',
     ),
     'illuminate/filesystem' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
@@ -275,8 +275,8 @@ private static $installed = array (
     ),
     'illuminate/hashing' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
@@ -284,17 +284,17 @@ private static $installed = array (
     ),
     'illuminate/http' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '7a52828aca24963676016bf217fecf14301b199d',
+      'reference' => '6ad0c5f88a1086d660ebe2c9b55fc1a3aca1122f',
     ),
     'illuminate/log' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
@@ -302,8 +302,8 @@ private static $installed = array (
     ),
     'illuminate/macroable' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
@@ -311,8 +311,8 @@ private static $installed = array (
     ),
     'illuminate/pagination' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
@@ -320,8 +320,8 @@ private static $installed = array (
     ),
     'illuminate/pipeline' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
@@ -329,17 +329,17 @@ private static $installed = array (
     ),
     'illuminate/queue' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '7e6479f3d3db7e8a8473960cce21f82733d768dd',
+      'reference' => '2c91bc9f5b0a9b306233b2e81b4cbc976703e017',
     ),
     'illuminate/session' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
@@ -347,26 +347,26 @@ private static $installed = array (
     ),
     'illuminate/support' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b5f12bc62bfca920d0b3379da7a7d282999343af',
+      'reference' => '930ae59aea86acd6abba2ab9c84bcfe41b1b7eec',
     ),
     'illuminate/testing' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'e099f0d51cd34a7a8853257d30eb7bb4ad48dbf6',
+      'reference' => 'fc228f555ebba37498353e172718175d7ac6831e',
     ),
     'illuminate/translation' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
@@ -374,8 +374,8 @@ private static $installed = array (
     ),
     'illuminate/validation' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
@@ -383,8 +383,8 @@ private static $installed = array (
     ),
     'illuminate/view' => 
     array (
-      'pretty_version' => 'v8.24.0',
-      'version' => '8.24.0.0',
+      'pretty_version' => 'v8.25.0',
+      'version' => '8.25.0.0',
       'aliases' => 
       array (
       ),
@@ -399,21 +399,21 @@ private static $installed = array (
     ),
     'laravel/lumen' => 
     array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
+      'pretty_version' => '1.0.0+no-version-set',
+      'version' => '1.0.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f53844a28352a26bbc42c0def32b7e66121572f2',
+      'reference' => NULL,
     ),
     'laravel/lumen-framework' => 
     array (
-      'pretty_version' => 'v8.2.1',
-      'version' => '8.2.1.0',
+      'pretty_version' => 'v8.2.2',
+      'version' => '8.2.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '288f3f36f71a326d22cffb8470b4c738a162dc3d',
+      'reference' => '0603a83a3b6385a12acc3c6aa50858e4907fb6e4',
     ),
     'mockery/mockery' => 
     array (
@@ -683,8 +683,8 @@ private static $installed = array (
     array (
       'provided' => 
       array (
-        0 => '1.0',
-        1 => '1.0.0',
+        0 => '1.0.0',
+        1 => '1.0',
       ),
     ),
     'psr/simple-cache' => 

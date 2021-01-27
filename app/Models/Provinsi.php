@@ -20,4 +20,8 @@ class Provinsi extends Model
         'kode_provinsi', 'nama_provinsi',
     ];
 
+    public function kota()
+    {
+        return $this->hasMany("App\Models\Kota");
+    }
 }

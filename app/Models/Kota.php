@@ -24,4 +24,9 @@ class Kota extends Model
     {
         return $this->belongsTo("App\Models\Provinsi", "kode_provinsi", "kode_provinsi");
     }
+
+    public function kelurahan()
+    {
+        return $this->hasMany("App\Models\Kelurahan");
+    }
 }

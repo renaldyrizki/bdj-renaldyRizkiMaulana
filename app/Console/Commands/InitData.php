@@ -6,9 +6,8 @@ use App\Models\Provinsi;
 use App\Models\Kota;
 use App\Models\Kecamatan;
 use App\Models\Kelurahan;
-use App\Models\JenisRumahSakit;
-use App\Models\RumahSakitTelepon;
-use App\Models\RumahSakitFaximile;
+use App\Models\Telepon;
+use App\Models\Faximile;
 use App\Models\RumahSakit;
 use Illuminate\Console\Command;
 
@@ -40,14 +39,14 @@ class InitData extends Command
 
     private function getWilayah(){
         $client = new \GuzzleHttp\Client();
-    
+
         $response = $client->request('GET', 'http://api.jakarta.go.id/v1/kelurahan', [
             'headers' => [
                 'Accept'     => 'application/json',
                 'Authorization'      => env('TOKEN_BDJ', ''),
             ]
         ]);
-    
+
         $statusCode = $response->getStatusCode();
         $body = $response->getBody()->getContents();
         $result = [];
@@ -55,28 +54,29 @@ class InitData extends Command
             $body = json_decode($body);
             $result = @$body->data;
         }
-    
+
         return $result;
     }
 
     private function getRumahSakit(){
         $client = new \GuzzleHttp\Client();
-    
+
         $response = $client->request('GET', 'http://api.jakarta.go.id/v1/rumahsakitumum', [
             'headers' => [
-                'Accept'     => 'application/json',
-                'Authorization'      => env('TOKEN_BDJ', ''),
+                'Accept' => 'application/json',
+                'Authorization' => env('TOKEN_BDJ', ''),
             ]
         ]);
-    
+
         $statusCode = $response->getStatusCode();
         $body = $response->getBody()->getContents();
+
         $result = [];
         if ($statusCode===200){
             $body = json_decode($body);
             $result = @$body->data;
         }
-    
+
         return $result;
     }
 
@@ -135,18 +135,13 @@ class InitData extends Command
         $datas = $this->getRumahSakit();
 
         foreach($datas as $data){
-            $jenisRSU = JenisRumahSakit::firstOrCreate([
-                'jenis_rsu' => $data->jenis_rsu,
-            ], [
-                'jenis_rsu' => $data->jenis_rsu,
-            ]);
 
             $rumahSakit = RumahSakit::firstOrCreate([
                 'id' => $data->id,
             ], [
                 'id' => $data->id,
                 'nama_rsu' => $data->nama_rsu,
-                'jenis_rumah_sakit_id' => $jenisRSU->id,
+                'jenis_rumah_sakit' => $data->jenis_rsu,
                 'kode_pos' => $data->kode_pos,
                 'website' => $data->website,
                 'email' => $data->email,
@@ -155,28 +150,28 @@ class InitData extends Command
                 'longitude' => $data->location->longitude,
                 'kode_kelurahan' => $data->kode_kelurahan,
             ]);
-            
+
             foreach($data->telepon as $telepon){
-                $telp = RumahSakitTelepon::firstOrCreate(
+                $telp = Telepon::firstOrCreate(
                     [
-                        'no_telp' => $telepon,
+                        'no_telepon' => $telepon,
                         'rumah_sakit_id' => $data->id,
                     ],
                     [
-                        'no_telp' => $telepon,
+                        'no_telepon' => $telepon,
                         'rumah_sakit_id' => $data->id,
                     ]
                 );
             }
 
             foreach($data->faximile as $faximile){
-                $telp = RumahSakitFaximile::firstOrCreate(
+                $telp = Faximile::firstOrCreate(
                     [
-                        'no_fax' => $faximile,
+                        'no_faximile' => $faximile,
                         'rumah_sakit_id' => $data->id,
                     ],
                     [
-                        'no_fax' => $faximile,
+                        'no_faximile' => $faximile,
                         'rumah_sakit_id' => $data->id,
                     ]
                 );
@@ -186,8 +181,8 @@ class InitData extends Command
 
     public function handle()
     {
-        $this->saveWilayah();  
-        $this->saveRumahSakit();      
+        $this->saveWilayah();
+        $this->saveRumahSakit();
 
         $this->info('Success...');
     }

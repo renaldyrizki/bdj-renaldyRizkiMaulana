@@ -14,10 +14,14 @@ class CreateKotaTable extends Migration
     public function up()
     {
         Schema::create('kota', function (Blueprint $table) {
-            $table->char('kode_kota')->primary();
-            $table->string('nama_kota');
+            $table->char('kode_kota', 4)->primary();
+            $table->string('nama_kota', 50);
             $table->char('kode_provinsi');
             $table->timestamps();
+            $table->foreign('kode_provinsi')
+                    ->references('kode_provinsi')
+                    ->on('provinsi')
+                    ->onCascade('delete');
         });
     }
 

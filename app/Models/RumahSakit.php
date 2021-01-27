@@ -19,13 +19,13 @@ class RumahSakit extends Model
     protected $fillable = [
         'id',
         'nama_rsu',
+        'jenis_rumah_sakit',
         'kode_pos',
         'website',
         'email',
         'alamat',
         'latitude',
         'longitude',
-        'jenis_rumah_sakit_id',
         'kode_kelurahan',
     ];
 
@@ -47,12 +47,12 @@ class RumahSakit extends Model
     public function getTeleponAttribute()
     {
         $telps = [];
-        foreach(RumahSakitTelepon::where('rumah_sakit_id', $this->id)->get() as $telp){
+        foreach(Telepon::where('rumah_sakit_id', $this->id)->get() as $telp){
             $telps[] = $telp->no_telp;
         }
         return $telps;
     }
-    
+
     public function getKecamatanAttribute()
     {
         $data = $this->with(['kelurahan.kecamatan' => function($q){
@@ -78,20 +78,25 @@ class RumahSakit extends Model
     public function getFaximileAttribute()
     {
         $faxs = [];
-        foreach(RumahSakitFaximile::where('rumah_sakit_id', $this->id)->get() as $fax){
+        foreach(Faximile::where('rumah_sakit_id', $this->id)->get() as $fax){
             $faxs[] = $fax->no_fax;
         }
         return $faxs;
     }
 
-    public function jenis()
-    {
-        return $this->belongsTo("App\Models\JenisRumahSakit", "jenis_rumah_sakit_id", "id");
-    }
-
     public function kelurahan()
     {
         return $this->belongsTo("App\Models\Kelurahan", "kode_kelurahan", "kode_kelurahan");
+    }
+
+    public function telepon()
+    {
+        return $this->hasMany("App\Models\Telepon");
+    }
+
+    public function faximile()
+    {
+        return $this->hasMany("App\Models\Faximile");
     }
 
 }

@@ -24,4 +24,9 @@ class Kecamatan extends Model
     {
         return $this->belongsTo("App\Models\Kota", "kode_kota", "kode_kota");
     }
+
+    public function kecamatan()
+    {
+        return $this->hasMany("App\Models\Kecamatan");
+    }
 }

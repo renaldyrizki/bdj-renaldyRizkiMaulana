@@ -18,7 +18,7 @@ class Controller extends BaseController
             'message' => $er->getMessage(),
         ], $statusCode);
     }
-    
+
     public function returnStatus($status = true, $message = "Data berhasil di ambil", $statusCode = 200) {
         return response([
             "status" => $status,

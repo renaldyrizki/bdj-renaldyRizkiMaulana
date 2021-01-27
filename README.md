@@ -1,3 +1,17 @@
+# Get Started
+
+## create database mySQL "dbj_rumah_sakit"
+
+## composer install
+
+## php artisan migrate
+
+## php artisan init:data
+
+## php -S localhost:8000 -t public
+
+### http://localhost:8000/v1/rumahsakitumum
+
 # Lumen PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)

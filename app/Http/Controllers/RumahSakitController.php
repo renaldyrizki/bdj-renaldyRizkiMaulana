@@ -3,8 +3,8 @@
  * RumahSakitController.php
  *
  * @package App\Http\Controllers
- * @author  Ferdhika Yudira
- * @email   fer@dika.web.id
+ * @author  Renaldy Rizki Maulana
+ * @email   renaldy.rizki@gmail.com
  */
 
 namespace App\Http\Controllers;

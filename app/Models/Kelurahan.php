@@ -24,4 +24,9 @@ class Kelurahan extends Model
     {
         return $this->belongsTo("App\Models\Kecamatan", "kode_kecamatan", "kode_kecamatan");
     }
+
+    public function rumah_sakit()
+    {
+        return $this->hasMany("App\Models\RumahSakit");
+    }
 }

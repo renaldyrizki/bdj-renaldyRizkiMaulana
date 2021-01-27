@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class JenisRumahSakit extends Model
+class Faximile extends Model
 {
     use HasFactory;
 
-    protected $table = 'jenis_rumah_sakit';
+    protected $table = 'faximile';
 
     /**
      * The attributes that are mass assignable.
@@ -17,7 +17,11 @@ class JenisRumahSakit extends Model
      * @var array
      */
     protected $fillable = [
-        'jenis_rsu',
+        'no_faximile', 'rumah_sakit_id'
     ];
 
+    public function rumahSakit()
+    {
+        return $this->belongsTo("App\Models\RumahSakit", "rumah_sakit_id", "id");
+    }
 }

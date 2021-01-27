@@ -14,10 +14,16 @@ class CreateKelurahanTable extends Migration
     public function up()
     {
         Schema::create('kelurahan', function (Blueprint $table) {
-            $table->char('kode_kelurahan')->primary();
-            $table->string('nama_kelurahan');
+            $table->char('kode_kelurahan', 10)->primary();
+            $table->string('nama_kelurahan', 50);
             $table->char('kode_kecamatan');
             $table->timestamps();
+            $table->foreign('kode_kecamatan')
+                    ->references('kode_kecamatan')
+                    ->on('kecamatan')
+                    ->onCascade('delete');
+
+
         });
     }
 
